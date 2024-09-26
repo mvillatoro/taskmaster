@@ -6,9 +6,9 @@ import { Name } from "./userTypes";
 
 import {
   createClient,
-  QueryResult,
-  QueryData,
-  QueryError,
+  // QueryResult,
+  // QueryData,
+  // QueryError,
 } from "@supabase/supabase-js";
 const supabaseUrl = "https://ivjghlocpshzvwrcizrm.supabase.co";
 const supabaseKey: string =
