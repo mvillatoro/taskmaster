@@ -4,20 +4,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { Name } from "./userTypes";
 
-import {
-  createClient,
-  // QueryResult,
-  // QueryData,
-  // QueryError,
-} from "@supabase/supabase-js";
+import { createClient } from "@supabase/supabase-js";
 const supabaseUrl = "https://ivjghlocpshzvwrcizrm.supabase.co";
 const supabaseKey: string =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2amdobG9jcHNoenZ3cmNpenJtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjczMDQ5MjksImV4cCI6MjA0Mjg4MDkyOX0.j3mWvtWWrmMK6MMtzU62H6RXPCgxkr6yI6ulBoSrzyQ"; //process.env.SUPABASE_KEY!;
 const supabase = createClient(supabaseUrl, supabaseKey);
-
-interface HomeProps {
-  names: Name[];
-}
 
 export default async function Home() {
   const { data: names, error } = await supabase
