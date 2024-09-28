@@ -1,7 +1,6 @@
 import { createClient } from "../../../utils/supabase/static-props";
 
-// @ts-ignore: Unreachable code error
-export default function PublicPage({ data }: { data?: any[] }) {
+export default function PublicPage({ data }: { data?: unknown[] }) {
   return <pre>{data && JSON.stringify(data, null, 2)}</pre>;
 }
 
