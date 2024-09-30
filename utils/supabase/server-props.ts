@@ -1,6 +1,8 @@
 import { type GetServerSidePropsContext } from "next";
 import { createServerClient, serializeCookieHeader } from "@supabase/ssr";
 
+require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` });
+
 export function createClient({ req, res }: GetServerSidePropsContext) {
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,

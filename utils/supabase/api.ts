@@ -1,6 +1,8 @@
 import { createServerClient, serializeCookieHeader } from "@supabase/ssr";
 import { type NextApiRequest, type NextApiResponse } from "next";
 
+require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` });
+
 export default function createClient(
   req: NextApiRequest,
   res: NextApiResponse

@@ -20,7 +20,7 @@ export default function Login() {
     if (error) {
       console.error(error);
     }
-    router.push("/");
+    router.push("/home");
   }
 
   async function signUp() {
